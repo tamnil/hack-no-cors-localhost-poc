@@ -11,6 +11,8 @@ Simulates vulnerability opened if CORS permission  is set to localhost , and an 
 
 
 
+this POC is a result of a result of a discussion about the use od localhost as default in cors configuration
+
 ## Aux notes:
 
 run with:

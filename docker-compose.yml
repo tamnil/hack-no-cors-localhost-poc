@@ -1,0 +1,25 @@
+version: "3.3"
+
+services:
+  target-app:
+    build:
+      context: ./server
+      dockerfile: Dockerfile.app
+    command: bash start.sh
+    # command: node badapp.js
+    volumes:
+      - ./server/app:/app
+      - ./server/stupiduserapp:/stupiduserapp
+    ports:
+      - "8081:8081"
+      - "80:80"
+    networks:
+      - front-tier
+      - back-tier
+
+volumes:
+  db-data:
+
+networks:
+  front-tier:
+  back-tier:

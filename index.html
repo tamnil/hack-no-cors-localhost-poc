@@ -1,0 +1,22 @@
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script>
+// call to CORS protected app
+    axios
+        .get("http://localhost:80")
+        .then(response => {
+            console.log('cors protected', response);
+        })
+        .catch(error => {
+            console.log('cors protected',error);
+        });
+
+    // call to  exploited app
+    axios
+        .get("http://localhost:8081")
+        .then(response => {
+            console.log('the hack bridge',response);
+        })
+        .catch(error => {
+            console.log('the hack bridge',error);
+        });
+</script>

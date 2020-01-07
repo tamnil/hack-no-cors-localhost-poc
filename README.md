@@ -1,4 +1,4 @@
-# POC - CORS
+# POC - CORS - localhost as default in CORS
 
 Proof of concept - vunerability opened if http://localhost is enabled as origin in production server - "xtreme go horse programming style" yank and paste rulez!!!!!
 
